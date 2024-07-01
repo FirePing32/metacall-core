@@ -49,7 +49,6 @@ include(SecurityFlags)
 
 set(include_path "${CMAKE_CURRENT_SOURCE_DIR}/include/${target}")
 set(source_path  "${CMAKE_CURRENT_SOURCE_DIR}/source")
-set_property(TARGET ${target} PROPERTY CXX_STANDARD 14)
 
 set(headers
 	${include_path}/js_loader.h
@@ -103,6 +102,8 @@ set_target_properties(${target}
 	FOLDER "${IDE_FOLDER}"
 	BUNDLE $<$<BOOL:${APPLE}>:$<$<VERSION_GREATER:${PROJECT_OS_VERSION},8>>>
 )
+
+set_property(TARGET ${target} PROPERTY CXX_STANDARD 14)
 
 #
 # Include directories
