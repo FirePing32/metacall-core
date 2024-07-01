@@ -103,7 +103,7 @@ set_target_properties(${target}
 	BUNDLE $<$<BOOL:${APPLE}>:$<$<VERSION_GREATER:${PROJECT_OS_VERSION},8>>>
 )
 
-set_property(TARGET ${target} PROPERTY CXX_STANDARD 14)
+set_property(TARGET ${target} PROPERTY CXX_STANDARD 17)
 
 #
 # Include directories
